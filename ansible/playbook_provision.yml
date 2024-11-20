@@ -6,17 +6,15 @@
   user: admin
   become: true
   pre_tasks:
-    # - name: Assign server name
-    #   ansible.builtin.import_tasks: tasks/server_name.yml
-    # - name: Update system
-    #   ansible.builtin.import_tasks: tasks/update_system.yml
-    - name: Increase swap size
-      ansible.builtin.import_tasks: tasks/increase_swap_size.yml
-
+    - name: Assign server name
+      ansible.builtin.import_tasks: tasks/server_name.yml
     - name: Remove unnecessary services
       ansible.builtin.import_tasks: tasks/remove_unnecessary_services.yml
-
+    - name: Update system
+      ansible.builtin.import_tasks: tasks/update_system.yml
+    - name: Increase swap size
+      ansible.builtin.import_tasks: tasks/increase_swap_size.yml
     - name: Install Cockpit and related packages
       ansible.builtin.import_tasks: tasks/install_cockpit.yml
-  # roles:
-  #   - role: marcomc.picapsule
+  roles:
+    - role: picapsule
