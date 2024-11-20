@@ -5,5 +5,5 @@ collections:
   - name: community.general
     version: 4.8.0
 roles:
-  - name: marcomc.picapsule
+  - name: picapsule
     src: https://github.com/marcomc/ansible-picapsule
