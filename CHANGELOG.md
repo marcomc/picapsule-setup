@@ -13,20 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic workspace configuration
 - Ansible playbook for PiCapsule provisioning
 - Docker container setup for development environment
-
-### Planned
-
-- Increase swap size to 1GB
-- Install Cockpit
-- Install cockpit-pcp package
-- Install Pi-Hole
-- Add support for multiple disk installations
-- Create uninstall task
-
-### To Be Removed
-
-- `wpasupplicant` package
-- Bluez service
+- increase swap size to 512MB
 
 ### Infrastructure
 
@@ -46,4 +33,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - community.general collection v4.8.0
 - marcomc.picapsule role
 
-[Unreleased]: https://github.com/yourusername/picapsule-setup/compare/v0.0.0...HEAD 
+[Unreleased]: https://github.com/yourusername/picapsule-setup/compare/v0.0.0...HEAD

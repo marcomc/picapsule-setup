@@ -6,9 +6,11 @@
   user: admin
   become: true
   pre_tasks:
-    - name: Assign server name
-      ansible.builtin.import_tasks: tasks/server_name.yml
-    - name: Update system
-      ansible.builtin.import_tasks: tasks/update_system.yml
+    # - name: Assign server name
+    #   ansible.builtin.import_tasks: tasks/server_name.yml
+    # - name: Update system
+    #   ansible.builtin.import_tasks: tasks/update_system.yml
+    - name: Increase swap size
+      ansible.builtin.import_tasks: tasks/increase_swap_size.yml
   roles:
     - role: marcomc.picapsule

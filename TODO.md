@@ -3,7 +3,6 @@
 - Workspace:
 
 - Ansible:
-  - increase swap size to 1GB
   - Install Cockpit
   - Install cockpit-pcp package
   - Install Pi-Hole
