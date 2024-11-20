@@ -15,5 +15,8 @@
 
     - name: Remove unnecessary services
       ansible.builtin.import_tasks: tasks/remove_unnecessary_services.yml
+
+    - name: Install Cockpit and related packages
+      ansible.builtin.import_tasks: tasks/install_cockpit.yml
   # roles:
   #   - role: marcomc.picapsule

@@ -2,9 +2,7 @@
 
 - Workspace:
 
-- Ansible:
-  - Install Cockpit
-  - Install cockpit-pcp package
+- Ansible: 
   - Install Pi-Hole
   - Add the possibility to install multiple disks to the PiCapsule
   - Create an uninstall task

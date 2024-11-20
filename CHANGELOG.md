@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic workspace configuration
 - Ansible playbook for PiCapsule provisioning
 - Docker container setup for development environment
+- Task file to install Cockpit and related packages
 
 ### Changed
 

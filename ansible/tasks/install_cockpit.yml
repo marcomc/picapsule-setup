@@ -1,0 +1,9 @@
+---
+- name: Install Cockpit and related packages
+  ansible.builtin.package:
+    name:
+      - cockpit
+      - cockpit-packagekit
+      - cockpit-storaged
+      - cockpit-pcp
+    state: present
