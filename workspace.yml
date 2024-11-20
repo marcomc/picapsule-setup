@@ -13,6 +13,8 @@ command('enable %'):
   exec: |
     #!bash(workspace:/)
     passthru docker compose up -d ${PARAMETER}
+    ws welcome
+
 
 command('rebuild %'):
   env:
@@ -53,9 +55,26 @@ command('ansible-playbook <playbook> <inventory>'):
     #!bash(workspace:/)|@
     passthru docker compose exec -u ansible console ansible-playbook ${PLAYBOOK} -i ${INVENTORY}
 
+command('ansible-galaxy install'):
+  env:
+    NAMESPACE: = @('namespace')
+  exec: |
+    #!bash(workspace:/)|@
+    passthru docker compose exec -u ansible console ansible-galaxy install -r ansible/requirements.ansible.yml --force
+
 command('ansible-lint'):
   env:
     NAMESPACE: = @('namespace')
   exec: |
     #!bash(workspace:/)|@
     passthru docker compose exec -u ansible console ansible-lint ansible/
+
+command('welcome'):
+  env:
+    NAMESPACE: = @('namespace')
+  exec: |
+    #!bash(workspace:/)
+    echo "Welcome to PiCapsule!"
+    echo "Cockpit URL: http://<raspberry_pi_ip>:9090"
+    echo "Pi-Hole URL: http://<raspberry_pi_ip>/admin"
+    echo "AFP Path: afp://<raspberry_pi_ip>/afpshare"
