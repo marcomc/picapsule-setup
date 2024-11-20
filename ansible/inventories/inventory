@@ -1,0 +1,9 @@
+[homebridge]
+Homebridge.local
+
+[picapsule]
+PiCapsule.local
+
+[pihole:children]
+homebridge
+picapsule

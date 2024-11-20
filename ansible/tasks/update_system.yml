@@ -1,0 +1,25 @@
+---
+- name: System update and cleanup
+  block:
+
+    - name: Fix broken dependencies
+      ansible.builtin.apt:
+        upgrade: dist
+        update_cache: true
+        cache_valid_time: 3600
+        dpkg_options: "--fix-broken"
+      become: true
+      failed_when: false
+
+    - name: Update and Upgrade all packages
+      ansible.builtin.apt:
+        upgrade: dist
+        update_cache: true
+        cache_valid_time: 3600
+      failed_when: false
+
+    - name: Remove unused packages
+      ansible.builtin.apt:
+        autoremove: true
+        purge: true
+      failed_when: false

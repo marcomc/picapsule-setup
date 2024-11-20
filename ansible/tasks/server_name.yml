@@ -1,0 +1,5 @@
+---
+- name: Create the server hostname
+  ansible.builtin.set_fact:
+    hostname: "{{ inventory_hostname | regex_replace('\\W', '-') | lower }}"
+  when: hostname is not defined

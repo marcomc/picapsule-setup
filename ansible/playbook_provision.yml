@@ -1,0 +1,14 @@
+---
+- name: Setup PiCapsule
+  hosts: picapsule
+  # connection: local
+  # gather_facts: false
+  user: admin
+  become: true
+  pre_tasks:
+    - name: Assign server name
+      ansible.builtin.import_tasks: tasks/server_name.yml
+    - name: Update system
+      ansible.builtin.import_tasks: tasks/update_system.yml
+  roles:
+    - role: marcomc.picapsule
