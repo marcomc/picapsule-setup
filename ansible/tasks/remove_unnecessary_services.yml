@@ -10,3 +10,8 @@
     name: upower.service
     enabled: false
     state: stopped
+
+- name: Remove tracker-extract packages
+  ansible.builtin.package:
+    name: tracker-extract
+    state: absent

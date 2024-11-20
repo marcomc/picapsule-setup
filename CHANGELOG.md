@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Disable `wpa_supplicant` and `upower` from the `systemd` service list
+- Remove tracker-extract packages
 
 ### Infrastructure
 
