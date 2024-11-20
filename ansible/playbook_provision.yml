@@ -12,5 +12,8 @@
     #   ansible.builtin.import_tasks: tasks/update_system.yml
     - name: Increase swap size
       ansible.builtin.import_tasks: tasks/increase_swap_size.yml
-  roles:
-    - role: marcomc.picapsule
+
+    - name: Remove unnecessary services
+      ansible.builtin.import_tasks: tasks/remove_unnecessary_services.yml
+  # roles:
+  #   - role: marcomc.picapsule

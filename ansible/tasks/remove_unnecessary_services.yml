@@ -1,0 +1,12 @@
+---
+- name: Stop and disable wpa_supplicant.service
+  ansible.builtin.systemd:
+    name: wpa_supplicant.service
+    enabled: false
+    state: stopped
+
+- name: Stop and disable upower.service
+  ansible.builtin.systemd:
+    name: upower.service
+    enabled: false
+    state: stopped

@@ -13,7 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic workspace configuration
 - Ansible playbook for PiCapsule provisioning
 - Docker container setup for development environment
-- increase swap size to 512MB
+
+### Changed
+
+- Increase swap size to 512MB
+
+### Removed
+
+- Disable `wpa_supplicant` and `upower` from the `systemd` service list
 
 ### Infrastructure
 
@@ -27,8 +34,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ansible-core==2.11.10
 - ansible-lint==5.4.0
-- boto3==1.18.10
-- botocore==1.21.10
 - ansible.posix collection v1.3.0
 - community.general collection v4.8.0
 - marcomc.picapsule role
