@@ -1,7 +1,14 @@
 ---
 undesired_services:
-  - wpa_supplicant
   - upower
+  - wpa_supplicant
 
 undesired_packages:
   - tracker-extract
+
+required_packages:
+  - gawk
+  - python3-psutil
+  - raspi-utils-core
+  - sed
+  - wakeonlan

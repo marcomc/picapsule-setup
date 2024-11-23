@@ -1,7 +1,6 @@
 ---
 - name: System update and cleanup
   block:
-
     - name: Fix broken dependencies
       ansible.builtin.package:
         upgrade: dist
@@ -23,14 +22,3 @@
         autoremove: true
         purge: true
       failed_when: false
-
-    - name: Install required apt packages
-      ansible.builtin.package:
-        name:
-          - pinctrl
-          - awk
-          - sed
-          - vcgencmd
-          - python3-psutil
-          - wakeonlan
-        state: present

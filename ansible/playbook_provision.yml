@@ -14,6 +14,8 @@
       ansible.builtin.import_tasks: tasks/remove_undesired_packages.yml
     - name: Update system
       ansible.builtin.import_tasks: tasks/update_system.yml
+    - name: Install required packages
+      ansible.builtin.import_tasks: tasks/install_required_packages.yml
     - name: Increase swap size
       ansible.builtin.import_tasks: tasks/increase_swap_size.yml
     - name: Install Cockpit and related packages
