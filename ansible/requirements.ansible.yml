@@ -7,3 +7,5 @@ collections:
 roles:
   - name: picapsule
     src: https://github.com/marcomc/ansible-picapsule
+  - name: pihole
+    src: https://github.com/marcomc/ansible-pihole

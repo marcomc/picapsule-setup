@@ -22,3 +22,4 @@
       ansible.builtin.import_tasks: tasks/install_cockpit.yml
   roles:
     - role: picapsule
+    - role: pihole
