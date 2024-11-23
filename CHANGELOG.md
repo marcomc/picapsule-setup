@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ansible playbook for PiCapsule provisioning
 - Docker container setup for development environment
 - Task file to install Cockpit and related packages
+- add the Pi-Hole installation via the `marcomc.picapsule` role
 
 ### Changed
 
