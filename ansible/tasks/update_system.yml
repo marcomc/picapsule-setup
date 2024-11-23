@@ -3,7 +3,7 @@
   block:
 
     - name: Fix broken dependencies
-      ansible.builtin.apt:
+      ansible.builtin.package:
         upgrade: dist
         update_cache: true
         cache_valid_time: 3600
@@ -12,14 +12,25 @@
       failed_when: false
 
     - name: Update and Upgrade all packages
-      ansible.builtin.apt:
+      ansible.builtin.package:
         upgrade: dist
         update_cache: true
         cache_valid_time: 3600
       failed_when: false
 
     - name: Remove unused packages
-      ansible.builtin.apt:
+      ansible.builtin.package:
         autoremove: true
         purge: true
       failed_when: false
+
+    - name: Install required apt packages
+      ansible.builtin.package:
+        name:
+          - pinctrl
+          - awk
+          - sed
+          - vcgencmd
+          - python3-psutil
+          - wakeonlan
+        state: present
