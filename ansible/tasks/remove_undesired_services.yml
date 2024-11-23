@@ -1,0 +1,14 @@
+---
+- name: Check if service files exist
+  ansible.builtin.stat:
+    path: "/etc/systemd/system/{{ item }}.service"
+  register: service_files
+  loop: "{{ undesired_services }}"
+
+- name: Stop and disable undesired services
+  ansible.builtin.systemd:
+    name: "{{ item.item }}.service"
+    enabled: false
+    state: stopped
+  when: item.stat.exists
+  loop: "{{ service_files.results }}"

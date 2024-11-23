@@ -1,0 +1,6 @@
+---
+- name: Remove undesired packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ undesired_packages }}"

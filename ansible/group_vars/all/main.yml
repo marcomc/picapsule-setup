@@ -1,0 +1,7 @@
+---
+undesired_services:
+  - wpa_supplicant
+  - upower
+
+undesired_packages:
+  - tracker-extract

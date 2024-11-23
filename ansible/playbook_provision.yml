@@ -8,8 +8,10 @@
   pre_tasks:
     - name: Assign server name
       ansible.builtin.import_tasks: tasks/server_name.yml
-    - name: Remove unnecessary services
-      ansible.builtin.import_tasks: tasks/remove_unnecessary_services.yml
+    - name: Remove undesired services
+      ansible.builtin.import_tasks: tasks/remove_undesired_services.yml
+    - name: Remove undesired packages
+      ansible.builtin.import_tasks: tasks/remove_undesired_packages.yml
     - name: Update system
       ansible.builtin.import_tasks: tasks/update_system.yml
     - name: Increase swap size
