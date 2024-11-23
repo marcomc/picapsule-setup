@@ -19,3 +19,8 @@ pihole_rev_server_cidr: "192.168.0.0/24"
 pihole_dnssec_enabled: "true"
 pihole_dnsmasq_listening: "local" # local/all
 pihole_privacy_level: "0" # 0 = Show everything, 1 = Hide domains and clients, 2 = Hide domains, 3 = Hide everything
+pihole_local_cname_records: |
+  cname=pihole.picapsule.local
+pihole_local_dns_records: |
+  192.168.1.115 picapsule.local
+  192.168.1.174 homebridge.local
