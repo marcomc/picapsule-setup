@@ -1,8 +1,8 @@
 [homebridge]
-Homebridge.local
+homebridge.local
 
 [picapsule]
-PiCapsule.local
+picapsule.local
 
 [pihole:children]
 homebridge

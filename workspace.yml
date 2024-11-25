@@ -2,14 +2,10 @@
 workspace('picapsule'):
   description: Workspace Environment for PiCapsule
 
-# attribute('services.console.environment'):
-  # SSH_PRIVATE_KEY: "= env('SSH_PRIVATE_KEY') ?: decrypt('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')"
-
 command('enable %'):
   env:
     PARAMETER: = input.argument('%')
     NAMESPACE: = @('namespace')
-    # SSH_PRIVATE_KEY: = @('services.console.environment.SSH_PRIVATE_KEY')
   exec: |
     #!bash(workspace:/)
     passthru docker compose up -d ${PARAMETER}
@@ -48,19 +44,19 @@ command('console'):
 command('ansible-playbook <playbook> <inventory>'):
   env:
     NAMESPACE: = @('namespace')
-    PARAMETER: = input.argument('%')
-    PLAYBOOK: =input.argument('playbook')
-    INVENTORY: =input.argument('inventory')
+    PLAYBOOK: = input.argument('playbook')
+    INVENTORY: = input.argument('inventory')
   exec: |
     #!bash(workspace:/)|@
     passthru docker compose exec -u ansible console ansible-playbook ${PLAYBOOK} -i ${INVENTORY}
 
-command('ansible-galaxy install'):
+command('ansible-galaxy install %'):
   env:
     NAMESPACE: = @('namespace')
+    PARAMETER: = input.argument('%')
   exec: |
     #!bash(workspace:/)|@
-    passthru docker compose exec -u ansible console ansible-galaxy install -r ansible/requirements.ansible.yml --force
+    passthru docker compose exec -u ansible console ansible-galaxy install -r ansible/requirements.ansible.yml ${PARAMETER}
 
 command('ansible-lint'):
   env:
@@ -75,6 +71,6 @@ command('welcome'):
   exec: |
     #!bash(workspace:/)
     echo "Welcome to PiCapsule!"
-    echo "Cockpit URL: http://<raspberry_pi_ip>:9090"
-    echo "Pi-Hole URL: http://<raspberry_pi_ip>/admin"
-    echo "AFP Path: afp://<raspberry_pi_ip>/afpshare"
+    echo "Cockpit URL: https://picapsule.local:9090"
+    echo "Pi-Hole URL: http://picapsule.local/admin/
+    echo "AFP Path: afp://picapsule.local/afpshare"
