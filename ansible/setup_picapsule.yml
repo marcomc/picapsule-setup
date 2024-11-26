@@ -3,7 +3,7 @@
   hosts: picapsule
   # connection: local
   # gather_facts: false
-  user: admin
+  user: "{{ lookup('env', 'ANSIBLE_USER') | default('admin', true) }}"
   become: true
   pre_tasks:
     - name: Assign server name

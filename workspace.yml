@@ -46,6 +46,7 @@ command('ansible-playbook <playbook> <inventory>'):
     NAMESPACE: = @('namespace')
     PLAYBOOK: = input.argument('playbook')
     INVENTORY: = input.argument('inventory')
+    ANSIBLE_USER: = @('ansible_user')
   exec: |
     #!bash(workspace:/)|@
     passthru docker compose exec -u ansible console ansible-playbook ${PLAYBOOK} -i ${INVENTORY}
@@ -68,9 +69,14 @@ command('ansible-lint'):
 command('welcome'):
   env:
     NAMESPACE: = @('namespace')
+    ANSIBLE_USER: = @('ansible_user')
   exec: |
     #!bash(workspace:/)
     echo "Welcome to PiCapsule!"
+    echo "====================="
+    echo "Admin user:  ${ANSIBLE_USER}"
     echo "Cockpit URL: https://picapsule.local:9090"
-    echo "Pi-Hole URL: http://picapsule.local/admin/
-    echo "AFP Path: afp://picapsule.local/afpshare"
+    echo "Pi-Hole URL: http://picapsule.local/admin/"
+    echo "AFP Path:    afp://picapsule.local/afpshare"
+
+attribute('ansible_user'): admin
