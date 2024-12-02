@@ -24,3 +24,7 @@ pihole_local_cname_records: |
 pihole_local_dns_records: |
   192.168.1.115 picapsule.local
   192.168.1.174 homebridge.local
+
+# TimeCapsule configuration
+timecapsule_user: "picapsule"
+timecapsule_disk_name: "picapsule1"

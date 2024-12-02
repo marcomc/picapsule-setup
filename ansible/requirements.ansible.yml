@@ -5,7 +5,10 @@ collections:
   - name: community.general
     version: 4.8.0
 roles:
-  - name: picapsule
-    src: https://github.com/marcomc/ansible-picapsule
+  - name: timecapsule
+    src: https://github.com/marcomc/ansible-role-timecapsule
   - name: pihole
     src: https://github.com/marcomc/ansible-pihole
+  - name: dnscrypt
+    src: https://github.com/marcomc/ansible-role-dnscrypt.git
+    version: "043f2d9"

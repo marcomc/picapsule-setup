@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ansible playbook for PiCapsule provisioning
 - Docker container setup for development environment
 - Task file to install Cockpit and related packages
-- add the Pi-Hole installation via the `marcomc.picapsule` role
+- add the Pi-Hole installation via the `marcomc.timecapsule` role
 - `ANSIBLE_USER` is now definable using an environment variable
 
 ### Changed
@@ -40,6 +40,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ansible-lint==5.4.0
 - ansible.posix collection v1.3.0
 - community.general collection v4.8.0
-- marcomc.picapsule role
+- marcomc.timecapsule role
 
 [Unreleased]: https://github.com/yourusername/picapsule-setup/compare/v0.0.0...HEAD
