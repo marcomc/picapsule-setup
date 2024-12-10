@@ -41,15 +41,21 @@ command('console'):
     #!bash(workspace:/)|@
     passthru docker compose exec -u ansible console bash
 
-command('ansible-playbook <playbook> <inventory>'):
+command('ansible-playbook <playbook> <inventory> <tags>'):
   env:
     NAMESPACE: = @('namespace')
     PLAYBOOK: = input.argument('playbook')
     INVENTORY: = input.argument('inventory')
+    TAGS: = input.argument('tags')
     ANSIBLE_USER: = @('ansible_user')
   exec: |
     #!bash(workspace:/)|@
-    passthru docker compose exec -u ansible console ansible-playbook ${PLAYBOOK} -i ${INVENTORY}
+    if [ -n "${TAGS}" ]; then
+      TAGS_PARAM="-t ${TAGS}"
+    else
+      TAGS_PARAM=""
+    fi
+    passthru docker compose exec -u ansible console ansible-playbook ${PLAYBOOK} -i ${INVENTORY} ${TAGS_PARAM} -v
 
 command('ansible-galaxy install %'):
   env:
