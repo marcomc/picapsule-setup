@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Task file to install Cockpit and related packages
 - add the Pi-Hole installation via the `marcomc.timecapsule` role
 - `ANSIBLE_USER` is now definable using an environment variable
+- Add installation of dnscrpyt-proxy
 
 ### Changed
 
