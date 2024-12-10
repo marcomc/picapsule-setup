@@ -28,3 +28,27 @@ pihole_local_dns_records: |
 # TimeCapsule configuration
 timecapsule_user: "picapsule"
 timecapsule_disk_name: "picapsule1"
+
+# DNSCrypt configuration
+dnscrypt_arch: { archive: linux_arm, dir: linux-arm }
+dnscrypt_on_pihole: "true"
+dnscrypt_sysd_socket_only: false
+# dnscrypt_bin: /opt/dnscrypt-proxy/dnscrypt-proxy
+# dnscrypt_config: /opt/dnscrypt-proxy/dnscrypt-proxy.toml
+dnscrypt_server_names: ['quad9-dnscrypt-ip4-filter-ecs-pri', 'quad9-dnscrypt-ip4-filter-pri', 'dnscry.pt-amsterdam02-ipv4', 'dnscry.pt-anon-copenhagen-ipv4']
+dnscrypt_anonymizer_server_names: ['anon-scaleway-ams', 'anon-sth-se', 'anon-v.dnscrypt.uk-ipv4,dnscry.pt-anon-madrid-ipv4', 'dnscry.pt-anon-munich-ipv4']
+dnscrypt_port: 5055
+dnscrypt_doh_servers: "false"
+dnscrypt_require_dnssec: "true"
+dnscrypt_require_nolog: "true"
+dnscrypt_require_nofilter: "false"
+dnscrypt_force_tcp: "true"
+dnscrypt_lb_strategy: "'p2'"
+dnscrypt_lb_estimator: "true"
+dnscrypt_bootstrap_resolvers: ['9.9.9.9:53', '8.8.8.8:53']
+dnscrypt_ignore_system_dns: "true"
+dnscrypt_netprobe_timeout: 60
+dnscrypt_netprobe_address: '9.9.9.9:53'
+dnscrypt_cache_size: 4096
+dnscrypt_cache_min_ttl: 2400
+dnscrypt_timeout: 5000
