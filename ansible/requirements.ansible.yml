@@ -11,4 +11,4 @@ roles:
     src: https://github.com/marcomc/ansible-pihole
   - name: dnscrypt
     src: https://github.com/marcomc/ansible-role-dnscrypt.git
-    version: "043f2d9"
+    # version: "043f2d9"
