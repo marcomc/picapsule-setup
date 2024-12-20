@@ -5,34 +5,34 @@
   # gather_facts: false
   user: "{{ lookup('env', 'ANSIBLE_USER') | default('admin', true) }}"
   become: true
-  # pre_tasks:
-  #   - name: Assign server name
-  #     ansible.builtin.import_tasks: tasks/server_name.yml
-  #     tags: server_name
+  pre_tasks:
+    - name: Assign server name
+      ansible.builtin.import_tasks: tasks/server_name.yml
+      tags: server_name
 
-  #   - name: Remove undesired services
-  #     ansible.builtin.import_tasks: tasks/remove_undesired_services.yml
-  #     tags: remove_services
+    - name: Remove undesired services
+      ansible.builtin.import_tasks: tasks/remove_undesired_services.yml
+      tags: remove_services
 
-  #   - name: Remove undesired packages
-  #     ansible.builtin.import_tasks: tasks/remove_undesired_packages.yml
-  #     tags: remove_packages
+    - name: Remove undesired packages
+      ansible.builtin.import_tasks: tasks/remove_undesired_packages.yml
+      tags: remove_packages
 
-  #   - name: Update system
-  #     ansible.builtin.import_tasks: tasks/update_system.yml
-  #     tags: update_system
+    - name: Update system
+      ansible.builtin.import_tasks: tasks/update_system.yml
+      tags: update_system
 
-  #   - name: Install required packages
-  #     ansible.builtin.import_tasks: tasks/install_required_packages.yml
-  #     tags: install_packages
+    - name: Install required packages
+      ansible.builtin.import_tasks: tasks/install_required_packages.yml
+      tags: install_packages
 
-  #   - name: Increase swap size
-  #     ansible.builtin.import_tasks: tasks/increase_swap_size.yml
-  #     tags: increase_swap
+    - name: Increase swap size
+      ansible.builtin.import_tasks: tasks/increase_swap_size.yml
+      tags: increase_swap
 
-  #   - name: Install Cockpit and related packages
-  #     ansible.builtin.import_tasks: tasks/install_cockpit.yml
-  #     tags: install_cockpit
+    - name: Install Cockpit and related packages
+      ansible.builtin.import_tasks: tasks/install_cockpit.yml
+      tags: install_cockpit
 
   roles:
     - role: timecapsule
