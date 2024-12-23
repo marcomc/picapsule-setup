@@ -41,7 +41,7 @@ command('console'):
     #!bash(workspace:/)|@
     passthru docker compose exec -u ansible console bash
 
-command('ansible-playbook <playbook> <inventory> <tags>'):
+command('ansible-playbook <playbook> <inventory> [<tags>]'):
   env:
     NAMESPACE: = @('namespace')
     PLAYBOOK: = input.argument('playbook')
