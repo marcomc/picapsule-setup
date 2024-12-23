@@ -12,3 +12,6 @@ roles:
   - name: dnscrypt
     src: https://github.com/marcomc/ansible-role-dnscrypt.git
     # version: "043f2d9"
+  - name: cloudflared-doh
+    src: https://github.com/marcomc/ansible-role-cloudflared-doh
+    version: "0de3cc0"

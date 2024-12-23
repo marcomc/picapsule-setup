@@ -52,3 +52,12 @@ dnscrypt_netprobe_address: '9.9.9.9:53'
 dnscrypt_cache_size: 4096
 dnscrypt_cache_min_ttl: 2400
 dnscrypt_timeout: 5000
+
+# Cloudflared configuration
+cloudflared_use_enviorment_file: false
+cloudflared_upstream_dns:
+  - https://doh.la.ahadns.net/dns-query
+  - https://dns.digitale-gesellschaft.ch/dns-query
+cloudflared_no_autoupdate: false
+cloudflared_service_name: "cloudflared-proxy.service"
+cloudflared_service_file: "/etc/systemd/system/cloudflared-proxy.service"

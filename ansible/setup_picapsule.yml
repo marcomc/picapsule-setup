@@ -35,6 +35,4 @@
       tags: install_cockpit
 
   roles:
-    - role: timecapsule
-    - role: pihole
-    - role: dnscrypt
+    - role: cloudflared-doh
